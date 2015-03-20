@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Docker Lamp</title>
+<link rel="stylesheet" type="text/css" href="./styles/tasks.css"
+	media="screen" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>    
+</head>
+<body>
+	<header>
+		<span>Sample Form</span>
+	</header>
+	<main>
+	<section id="taskCreation" class="not">
+		<form method="post" ACTION="./cgi-bin/pytest.py">
+			<div>
+				<label>Task</label> <input type="text" required="required"
+					name="server" class="large" placeholder="10.132.0.233:8080" />
+			</div>
+			<div>
+				<label>User Name</label> <input type="text" required="required"
+					name="user" />
+			</div>
+            <div>
+				<label>Password</label> <input type="password" required="required"
+					name="passwd" />
+			</div>
+			<nav>
+				<input type="submit" value="Do it!">
+			</nav>
+		</form>
+	</section>
+	
+	</main>
+	<footer>You have 3 tasks</footer>
+</body>
+<script>
+$(document).ready(function() {
+	$('[required="required"]').prev('label').append( '<span>*</span>').children( 'span').addClass('required');
+	
+</script>
+</html>
+
